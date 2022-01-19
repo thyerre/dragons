@@ -10,6 +10,7 @@ import { InputComponent } from './components/input/input.component';
 import { AuthComponent } from './screens/auth/auth.component';
 import { HomeComponent } from './screens/home/home.component';
 import { ButtonComponent } from './components/button/button.component';
+import { CardNewRegisterComponent } from './components/card-new-register/card-new-register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonComponent } from './components/button/button.component';
     AuthComponent,
     CardLoginComponent,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    CardNewRegisterComponent
   ],
   imports: [
     BrowserModule,

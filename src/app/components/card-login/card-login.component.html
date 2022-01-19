@@ -4,8 +4,8 @@
     </div>
     <div class="content">
         <app-input [parentForm]="form" nameControl="user" placeholder="User"></app-input>
-        <app-input [parentForm]="form" nameControl="password" placeholder="User"></app-input>
+        <app-input [parentForm]="form" nameControl="password" placeholder="****"></app-input>
         <app-button title="Entrar" type="login" [disabled]="form.invalid" (emiterActionButton)="login()"></app-button>
-        <app-button title="Criar Conta" type="transparent" (emiterActionButton)="newRegister()"></app-button>
+        <app-button title="Criar Conta" type="transparent" (emiterActionButton)="toNewRegister()"></app-button>
     </div>
 </div>

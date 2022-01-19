@@ -18,6 +18,20 @@
             filter: brightness(90%) saturate(90%);
         }
     }
+    .new-register {
+        background-color: none;
+        border: none;
+        background-color: #04d361;
+        height: 65px;
+        width: 180px;
+        border-radius: 30px;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            filter: brightness(90%) saturate(90%);
+        }
+    }
     .transparent {
         background-color: transparent;
         border: none;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Event, NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,16 +10,19 @@ import { filter } from 'rxjs/operators';
 })
 export class AuthComponent implements OnInit {
 
+  card: string = "login";
+
   constructor(
-    private router: Router
+    private authService: AuthService
   ) { }
 
-
   ngOnInit(): void {
-    this.router.events.pipe(
-      filter((event: Event) => event instanceof NavigationStart)
-    ).subscribe((event) => {
+    this.syncCard();
+  }
 
+  syncCard(): void {
+    this.authService.authCard.subscribe((card: string) => {
+      this.card = card;
     })
   }
 }

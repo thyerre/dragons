@@ -3,11 +3,11 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { AuthService } from 'src/app/screens/auth/auth.service';
 
 @Component({
-  selector: 'app-card-login',
-  templateUrl: './card-login.component.html',
-  styleUrls: ['./card-login.component.scss']
+  selector: 'app-card-new-register',
+  templateUrl: './card-new-register.component.html',
+  styleUrls: ['./card-new-register.component.scss']
 })
-export class CardLoginComponent implements OnInit {
+export class CardNewRegisterComponent implements OnInit {
 
   form: FormGroup = {} as FormGroup;
 
@@ -24,14 +24,15 @@ export class CardLoginComponent implements OnInit {
     this.form = this.formBuilder.group({
       user: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
+      repeat_password: new FormControl('', Validators.required),
     });
   }
 
-  login(): void {
+  saveRegister(): void {
 
   }
 
-  toNewRegister(): void {
-    this.authService.setCard('new-register');
+  toLogin(): void {
+    this.authService.setCard('login');
   }
 }
