@@ -4,42 +4,31 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    .login {
+    button {
         background-color: none;
         border: none;
-        background-color: #8257E5;
         height: 65px;
         width: 180px;
         border-radius: 30px;
-        color: #fff;
         font-weight: bold;
         cursor: pointer;
         &:hover {
             filter: brightness(90%) saturate(90%);
         }
     }
+    .login {
+        background-color: #8257E5;
+        color: #fff;
+    }
     .new-register {
-        background-color: none;
-        border: none;
         background-color: #04d361;
-        height: 65px;
-        width: 180px;
-        border-radius: 30px;
         color: #000;
-        font-weight: bold;
-        cursor: pointer;
-        &:hover {
-            filter: brightness(90%) saturate(90%);
-        }
+        font-size: .88em;
     }
     .transparent {
         background-color: transparent;
         border: none;
-        height: 65px;
-        width: 180px;
-        border-radius: 30px;
         color: #fff;
-        font-weight: bold;
         font-size: 1.1em;
         cursor: pointer;
         &:hover {
