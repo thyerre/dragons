@@ -1,0 +1,19 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    button {
+        background-color: none;
+        border: none;
+        background-color: #8257E5;
+        height: 65px;
+        width: 180px;
+        border-radius: 30px;
+        color: #fff;
+        font-weight: bold;
+        &:hover {
+            filter: brightness(90%) saturate(90%);
+        }
+    }
+}
