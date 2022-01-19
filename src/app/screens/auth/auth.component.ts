@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Event, NavigationStart, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-auth',
@@ -12,12 +13,12 @@ export class AuthComponent implements OnInit {
     private router: Router
   ) { }
 
+
   ngOnInit(): void {
-    this.isLoggin();
-  }
+    this.router.events.pipe(
+      filter((event: Event) => event instanceof NavigationStart)
+    ).subscribe((event) => {
 
-  isLoggin(): void {
-    this.router.navigate(['auth']);
+    })
   }
-
 }

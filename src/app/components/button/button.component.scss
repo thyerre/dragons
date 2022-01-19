@@ -3,7 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    button {
+    margin-bottom: 20px;
+    .login {
         background-color: none;
         border: none;
         background-color: #8257E5;
@@ -12,8 +13,23 @@
         border-radius: 30px;
         color: #fff;
         font-weight: bold;
+        cursor: pointer;
         &:hover {
             filter: brightness(90%) saturate(90%);
+        }
+    }
+    .transparent {
+        background-color: transparent;
+        border: none;
+        height: 65px;
+        width: 180px;
+        border-radius: 30px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+        &:hover {
+            filter: brightness(80%) saturate(80%);
         }
     }
 }
