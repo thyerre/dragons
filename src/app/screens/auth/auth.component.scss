@@ -1,0 +1,16 @@
+.container {
+    // background-color: black;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('https://images5.alphacoders.com/958/thumb-1920-958580.jpg') no-repeat center top fixed;
+    background-size: cover;
+    div {
+        margin-left: 100px;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+    }
+}
