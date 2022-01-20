@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { StorageService } from './storage/storage.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'dragons';
 
   constructor(
-    private router: Router
+    private router: Router,
+    private storageService: StorageService,
   ) { }
 
   ngOnInit(): void {
@@ -18,6 +20,10 @@ export class AppComponent implements OnInit {
   }
 
   isLoggin(): void {
-    // this.router.navigate(['dragons']);
+    if (this.storageService.getMe()) {
+      this.router.navigate(['dragons']);
+    } else {
+      this.router.navigate(['auth']);
+    }
   }
 }
