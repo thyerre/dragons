@@ -47,10 +47,10 @@ export class CardNewRegisterComponent implements OnInit {
     const values = this.form.value;
 
     if (await this.verifyPasswordEqual(values)) {
-      this.storageService.saveUser(values);
+      this.storageService.saveUsers(values);
       this.router.navigate(['home']);
     } else {
-      alert('As senha devem ser iguais!')
+      alert('As senhas devem ser iguais!')
     }
   }
 

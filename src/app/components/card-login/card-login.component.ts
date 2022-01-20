@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/screens/auth/auth.service';
+import { StorageService } from 'src/app/storage/storage.service';
 
 @Component({
   selector: 'app-card-login',
@@ -14,6 +16,8 @@ export class CardLoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
+    private storageService: StorageService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -27,8 +31,14 @@ export class CardLoginComponent implements OnInit {
     });
   }
 
-  login(): void {
-
+  async login(): Promise<void> {
+    const isLogin = await this.storageService.verifyUserAndPassword(this.form.value);
+    if (isLogin) {
+      this.storageService.setMe(this.form.value)
+      this.router.navigate(['home']);
+    } else {
+      alert('Usuário e senha não conferem!')
+    }
   }
 
   toNewRegister(): void {
