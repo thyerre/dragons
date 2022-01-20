@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './screens/auth/auth.component';
-import { HomeComponent } from './screens/home/home.component';
 import { AuthGuard } from './security/auth.guard';
 
 const routes: Routes = [
@@ -10,10 +9,13 @@ const routes: Routes = [
     component: AuthComponent
   },
   {
-    path: 'home',
-    component: HomeComponent,
-    canActivate: [AuthGuard]
-  }
+    path: "dragons",
+    loadChildren: () =>
+      import("./screens/dragon/dragon.module").then(
+        (m) => m.DragonModule
+      ),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

@@ -49,7 +49,7 @@ export class CardNewRegisterComponent implements OnInit {
 
     if (await this.verifyPasswordEqual(values)) {
       this.storageService.saveUsers(values);
-      this.router.navigate(['home']);
+      this.router.navigate(['dragons']);
     } else {
       alert('As senhas devem ser iguais!')
     }

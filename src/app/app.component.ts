@@ -18,6 +18,6 @@ export class AppComponent implements OnInit {
   }
 
   isLoggin(): void {
-    // this.router.navigate(['home']);
+    // this.router.navigate(['dragons']);
   }
 }

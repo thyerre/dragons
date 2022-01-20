@@ -35,7 +35,7 @@ export class CardLoginComponent implements OnInit {
     const isLogin = await this.storageService.verifyUserAndPassword(this.form.value);
     if (isLogin) {
       this.storageService.setMe(this.form.value)
-      this.router.navigate(['home']);
+      this.router.navigate(['dragons']);
     } else {
       alert('Usuário e senha não conferem!')
     }
