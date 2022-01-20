@@ -19,6 +19,7 @@ import { AuthComponent } from './screens/auth/auth.component';
     InputComponent,
     ButtonComponent,
     CardNewRegisterComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -27,8 +27,12 @@ export class StorageService {
     return false;
   }
 
-  getMe(): User | boolean {
+  getMe(): User {
     return this.getItem("me");
+  }
+
+  removeMe(): void {
+    return localStorage.removeItem("me");
   }
 
   getUsers(): User | boolean {
