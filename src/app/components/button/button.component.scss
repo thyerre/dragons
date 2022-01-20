@@ -15,6 +15,9 @@
         &:hover {
             filter: brightness(90%) saturate(90%);
         }
+        &:disabled {
+            filter: brightness(50%) saturate(50%);
+        }
     }
     .login {
         background-color: #8257E5;

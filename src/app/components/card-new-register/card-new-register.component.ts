@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/screens/auth/auth.service';
+
+import { StorageService } from './../../storage/storage.service';
 
 @Component({
   selector: 'app-card-new-register',
@@ -14,6 +17,8 @@ export class CardNewRegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
+    private storageService: StorageService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -28,8 +33,25 @@ export class CardNewRegisterComponent implements OnInit {
     });
   }
 
-  saveRegister(): void {
+  async verifyPasswordEqual({ password, repeat_password }: any): Promise<boolean> {
+    return new Promise((resolve) => {
+      if (password !== repeat_password) {
+        resolve(false);
+      }
 
+      resolve(true);
+    });
+  }
+
+  async saveNewRegister(): Promise<void> {
+    const values = this.form.value;
+
+    if (await this.verifyPasswordEqual(values)) {
+      this.storageService.saveUser(values);
+      this.router.navigate(['home']);
+    } else {
+      alert('As senha devem ser iguais!')
+    }
   }
 
   toLogin(): void {
