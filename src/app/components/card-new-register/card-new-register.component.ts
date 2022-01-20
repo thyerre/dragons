@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/app.interfaces';
 import { AuthService } from 'src/app/screens/auth/auth.service';
 
 import { StorageService } from './../../storage/storage.service';
@@ -33,7 +34,7 @@ export class CardNewRegisterComponent implements OnInit {
     });
   }
 
-  async verifyPasswordEqual({ password, repeat_password }: any): Promise<boolean> {
+  async verifyPasswordEqual({ password, repeat_password }: User): Promise<boolean> {
     return new Promise((resolve) => {
       if (password !== repeat_password) {
         resolve(false);

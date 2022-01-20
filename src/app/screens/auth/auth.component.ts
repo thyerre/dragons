@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Event, NavigationStart, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 import { AuthService } from './auth.service';
 
 @Component({
