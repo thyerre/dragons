@@ -34,7 +34,7 @@ export class ListComponent implements OnInit {
   }
 
   getDragons(): void {
-    this.dragonService.getDragons().subscribe({
+    this.dragonService.index().subscribe({
       next: (dragons: Dragon[]) => {
         this.listDragons = dragons;
         this.allDragons = dragons;
@@ -51,5 +51,16 @@ export class ListComponent implements OnInit {
 
   filterDragons(term: string): void {
     this.listDragons = this.allDragons.filter((elem) => elem.name.includes(term) || elem.type.includes(term))
+  }
+
+  deleteDragon(id: string): void {
+    if (confirm("Deseja realmente excluir esse dragão?")) {
+      this.dragonService.delete(id).subscribe({
+        next: (dragons: Dragon[]) => {
+          this.listDragons = this.listDragons.filter((elem) => elem.id !== id);
+          this.allDragons = this.allDragons.filter((elem) => elem.id !== id);
+        }
+      });
+    }
   }
 }

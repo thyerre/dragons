@@ -1,6 +1,9 @@
 <div class="container">
     <div class="content-top">
         <div class="title">
+            <a [routerLink]="['/dragons', {outlets: {view: ['insert']}}]">
+                <img class="add-icon" src="/assets/img/plus.png" alt="plus">
+            </a>
             <h1>Dragons List</h1>
         </div>
         <div class="search">
@@ -23,8 +26,15 @@
                     <td>{{item.type}}</td>
                     <td>{{item.createdAt | date: 'dd/MM/yyyy HH:mm:ss'}}</td>
                     <td>
-                        <a [routerLink]="['/dragons', {outlets: {view: ['edit', item.id]}}]">edit</a>
-                        <span>X</span>
+                        <a [routerLink]="['/dragons', {outlets: {view: ['detail', item.id]}}]">
+                            <img class="action-icon" src="/assets/img/preview.png" alt="preview">
+                        </a>
+                        <a [routerLink]="['/dragons', {outlets: {view: ['edit', item.id]}}]">
+                            <img class="action-icon" src="/assets/img/editing.png" alt="editing">
+                        </a>
+                        <a (click)="deleteDragon(item.id)">
+                            <img class="action-icon" src="/assets/img/remove.png" alt="remove">
+                        </a>
                     </td>
                 </tr>
             </tbody>

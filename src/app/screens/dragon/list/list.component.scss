@@ -8,9 +8,16 @@
         align-items: center;
         .title {
             width: 300px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             h1 {
                 font-size: 1.3em;
                 color: #fff;
+            }
+            .add-icon {
+                width: 30px;
+                margin-right: 15px;
             }
         }
         .search {
@@ -34,6 +41,11 @@
                 tr {
                     height: 40px;
                     color: #979797;
+                    .action-icon {
+                        width: 30px;
+                        margin-right: 15px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
