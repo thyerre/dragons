@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .content-top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .title {
+            width: 300px;
+            h1 {
+                font-size: 1.3em;
+                color: #fff;
+            }
+        }
+        .search {
+            flex: 1;
+        }
+    }
+    .content-table {
+        flex: 1;
+        background-color: #121214;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        table {
+            padding: 20px;
+            width: 100%;
+            thead {
+                background-color: #121214;
+                color: #fff;
+                text-align: left;
+            }
+            tbody {
+                tr {
+                    height: 40px;
+                    color: #979797;
+                }
+            }
+        }
+    }
+}

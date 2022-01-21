@@ -3,15 +3,6 @@
         <app-header></app-header>
     </div>
     <div class="content">
-        <a [routerLink]="[{outlets: {view: 'insert'}}]">
-      insert
-    </a>
-        <a [routerLink]="[{outlets: {view: ['alter', '12']}}]">
-      alter
-    </a>
-        <a [routerLink]="[{outlets: {view: ['list']}}]">
-      list
-    </a>
         <router-outlet name="view"></router-outlet>
     </div>
 </div>

@@ -5,3 +5,9 @@ body {
     padding: 0;
     font-family: Roboto, sans-serif;
 }
+
+app-list {
+    width: 100%;
+    flex: 1;
+    display: flex;
+}

@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AuthComponent } from './screens/auth/auth.component';
-import { AlterComponent } from './screens/dragon/alter/alter.component';
 import { DetailComponent } from './screens/dragon/detail/detail.component';
 import { DragonComponent } from './screens/dragon/dragon.component';
+import { EditComponent } from './screens/dragon/edit/edit.component';
 import { InsertComponent } from './screens/dragon/insert/insert.component';
 import { ListComponent } from './screens/dragon/list/list.component';
 import { AuthGuard } from './security/auth.guard';
@@ -35,8 +35,8 @@ const routes: Routes = [
         outlet: 'view'
       },
       {
-        path: 'alter/:id',
-        component: AlterComponent,
+        path: 'edit/:id',
+        component: EditComponent,
         outlet: 'view'
       },
     ],
