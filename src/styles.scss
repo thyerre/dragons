@@ -6,7 +6,10 @@ body {
     font-family: Roboto, sans-serif;
 }
 
-app-list {
+app-list,
+app-detail,
+app-edit,
+app-insert {
     width: 100%;
     flex: 1;
     display: flex;
