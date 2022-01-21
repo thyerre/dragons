@@ -36,8 +36,8 @@ export class ListComponent implements OnInit {
   getDragons(): void {
     this.dragonService.index().subscribe({
       next: (dragons: Dragon[]) => {
-        this.listDragons = dragons;
-        this.allDragons = dragons;
+        this.allDragons = this.orderList(dragons);
+        this.listDragons = this.allDragons;
       }
     });
   }
@@ -45,7 +45,7 @@ export class ListComponent implements OnInit {
   searchInput(): void {
     this.form.get('search')?.valueChanges.subscribe((term: string) => {
       clearTimeout(this.typingTimer);
-      this.typingTimer = setTimeout(() => this.filterDragons(term), 1000);
+      this.typingTimer = setTimeout(() => this.filterDragons(term), 800);
     })
   }
 
@@ -56,11 +56,15 @@ export class ListComponent implements OnInit {
   deleteDragon(id: string): void {
     if (confirm("Deseja realmente excluir esse dragão?")) {
       this.dragonService.delete(id).subscribe({
-        next: (dragons: Dragon[]) => {
+        next: () => {
           this.listDragons = this.listDragons.filter((elem) => elem.id !== id);
           this.allDragons = this.allDragons.filter((elem) => elem.id !== id);
         }
       });
     }
+  }
+
+  orderList(list: Dragon[]): Dragon[] {
+    return list.sort((a, b) => a.name.localeCompare(b.name) )
   }
 }
