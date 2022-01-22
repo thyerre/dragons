@@ -1,5 +1,5 @@
 export interface Dragon {
-  createdAt: string,
+  createdAt?: string,
   id: string,
   name: string,
   type: string

@@ -27,7 +27,7 @@ describe('StorageService', () => {
     (done: DoneFn) => {
       const me = service.getMe();
 
-      expect(typeof me).toBe('object');
+      expect(typeof me === 'object' || typeof me === 'boolean').toBeTrue();
       done();
   });
 
@@ -35,7 +35,19 @@ describe('StorageService', () => {
     (done: DoneFn) => {
       const users = service.getUsers();
 
-      expect(typeof users).toBe('object');
+      expect(typeof users === 'object' || typeof users === 'boolean').toBeTrue();
+      done();
+  });
+
+  it('#verifyUserAndPassword should return value promise from localstorage',
+    async (done: DoneFn) => {
+      const login: User = {
+        user: 'thyerre',
+        password: '123'
+      };
+      const users = await service.verifyUserAndPassword(login);
+
+      expect(typeof users).toBe('boolean');
       done();
   });
 });
