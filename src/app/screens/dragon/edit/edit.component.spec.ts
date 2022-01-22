@@ -1,5 +1,9 @@
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
+import { DragonService } from '../dragon.service';
 import { EditComponent } from './edit.component';
 
 describe('EditComponent', () => {
@@ -8,7 +12,9 @@ describe('EditComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditComponent ]
+      declarations: [ EditComponent ],
+      imports: [ReactiveFormsModule, HttpClientModule, RouterTestingModule],
+      providers: [DragonService]
     })
     .compileComponents();
   });

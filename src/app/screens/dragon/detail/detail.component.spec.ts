@@ -1,5 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
+import { DragonService } from '../dragon.service';
 import { DetailComponent } from './detail.component';
 
 describe('DetailComponent', () => {
@@ -8,7 +11,9 @@ describe('DetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailComponent ]
+      declarations: [ DetailComponent],
+      imports: [HttpClientModule, RouterTestingModule],
+      providers: [DragonService]
     })
     .compileComponents();
   });

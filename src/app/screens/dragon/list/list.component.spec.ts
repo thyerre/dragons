@@ -1,4 +1,8 @@
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DragonService } from '../dragon.service';
 
 import { ListComponent } from './list.component';
 
@@ -8,7 +12,9 @@ describe('ListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListComponent ]
+      declarations: [ ListComponent ],
+      imports: [ReactiveFormsModule, HttpClientModule, RouterTestingModule],
+      providers: [DragonService]
     })
     .compileComponents();
   });

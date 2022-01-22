@@ -13,4 +13,12 @@ describe('StorageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('#getItem should return value from localstorage',
+    (done: DoneFn) => {
+      const me = service.getItem('me')
+
+      expect(me === false || me.name !== undefined).toBeTruthy();
+      done();
+    });
 });
