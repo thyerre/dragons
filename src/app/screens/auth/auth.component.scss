@@ -34,13 +34,17 @@
             display: flex;
             justify-content: center;
             img {
-                width: 100%
+                width: 100%;
+                max-width: 1080px
             }
         }
     }
 }
 
 @media (max-width: 1000px) {
+    .content-title {
+        margin-top: 0px !important;
+    }
     .content {
         .banner {
             display: none !important;
