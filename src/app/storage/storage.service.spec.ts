@@ -1,3 +1,4 @@
+import { User } from 'src/app/app.interfaces';
 import { TestBed } from '@angular/core/testing';
 
 import { StorageService } from './storage.service';
@@ -20,5 +21,21 @@ describe('StorageService', () => {
 
       expect(me === false || me.name !== undefined).toBeTruthy();
       done();
-    });
+  });
+
+  it('#getMe should return value from localstorage',
+    (done: DoneFn) => {
+      const me = service.getMe();
+
+      expect(typeof me).toBe('object');
+      done();
+  });
+
+  it('#getUsers should return value from localstorage',
+    (done: DoneFn) => {
+      const users = service.getUsers();
+
+      expect(typeof users).toBe('object');
+      done();
+  });
 });

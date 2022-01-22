@@ -33,7 +33,7 @@ export class StorageService {
   }
 
   removeMe(): void {
-    return localStorage.removeItem("me");
+    localStorage.removeItem("me");
   }
 
   getUsers(): User | boolean {
