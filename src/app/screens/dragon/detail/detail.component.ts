@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route } from '@angular/router';
+import { Dragon } from '../dragon.interfaces';
+import { DragonService } from '../dragon.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  dragon: Dragon = {} as Dragon;
+
+  constructor(
+    private dragonService: DragonService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.getDragon();
   }
 
+  getDragon(): void {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    if (id) {
+      this.dragonService.getById(id).subscribe({
+        next: (dragon: Dragon) => {
+          this.dragon = dragon;
+        }
+      });
+    }
+  }
 }

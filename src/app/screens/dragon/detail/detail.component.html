@@ -1,14 +1,17 @@
 <div class="container">
     <div class="content-top">
         <div class="title">
+            <a [routerLink]="['/dragons', {outlets: {view: ['list']}}]">
+                <img class="back-icon" src="/assets/img/left.png" alt="left">
+            </a>
             <h1>Dragons Detail</h1>
         </div>
     </div>
     <div class="content">
         <ul>
-            <li><strong>Name: </strong> <span>Carlos</span></li>
-            <li><strong>Type: </strong> <span>Carlos</span></li>
-            <li><strong>Created at: </strong> <span>Carlos</span></li>
+            <li><strong>Name: </strong> <span>{{dragon.name}}</span></li>
+            <li><strong>Type: </strong> <span>{{dragon.type}}</span></li>
+            <li><strong>Created at: </strong> <span>{{dragon.createdAt | date: 'dd/MM/yyyy HH:mm:ss'}}</span></li>
         </ul>
     </div>
 </div>

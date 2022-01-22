@@ -27,10 +27,10 @@
                     <td>{{item.createdAt | date: 'dd/MM/yyyy HH:mm:ss'}}</td>
                     <td>
                         <a [routerLink]="['/dragons', {outlets: {view: ['detail', item.id]}}]">
-                            <img class="action-icon" src="/assets/img/preview.png" alt="preview">
+                            <img class="action-icon" src="/assets/img/detail.png" alt="detail">
                         </a>
                         <a [routerLink]="['/dragons', {outlets: {view: ['edit', item.id]}}]">
-                            <img class="action-icon" src="/assets/img/editing.png" alt="editing">
+                            <img class="action-icon" src="/assets/img/edit.png" alt="edit">
                         </a>
                         <a (click)="deleteDragon(item.id)">
                             <img class="action-icon" src="/assets/img/remove.png" alt="remove">

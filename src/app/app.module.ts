@@ -11,7 +11,10 @@ import { CardNewRegisterComponent } from './components/card-new-register/card-ne
 import { HeaderComponent } from './components/header/header.component';
 import { InputComponent } from './components/input/input.component';
 import { AuthComponent } from './screens/auth/auth.component';
+import { DetailComponent } from './screens/dragon/detail/detail.component';
 import { DragonComponent } from './screens/dragon/dragon.component';
+import { EditComponent } from './screens/dragon/edit/edit.component';
+import { InsertComponent } from './screens/dragon/insert/insert.component';
 import { ListComponent } from './screens/dragon/list/list.component';
 
 @NgModule({
@@ -24,7 +27,10 @@ import { ListComponent } from './screens/dragon/list/list.component';
     CardNewRegisterComponent,
     HeaderComponent,
     DragonComponent,
-    ListComponent
+    ListComponent,
+    DetailComponent,
+    EditComponent,
+    InsertComponent
 
   ],
   imports: [

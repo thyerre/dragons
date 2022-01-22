@@ -1,9 +1,16 @@
 <div class="container">
     <div class="content-top">
         <div class="title">
+            <a [routerLink]="['/dragons', {outlets: {view: ['list']}}]">
+                <img class="back-icon" src="/assets/img/left.png" alt="left">
+            </a>
             <h1>Dragons Edit</h1>
         </div>
     </div>
     <div class="content">
+        <app-input [parentForm]="form" nameControl="name" placeholder="" class="white" label="Name"></app-input>
+        <app-input [parentForm]="form" nameControl="type" placeholder="" class="white" label="Type"></app-input>
+        <app-button title="Save" type="login" [disabled]="form.invalid" (emiterActionButton)="update()"></app-button>
+        <app-button title="Clear" type="transparent" (emiterActionButton)="clear()"></app-button>
     </div>
 </div>

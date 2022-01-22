@@ -54,7 +54,7 @@ export class ListComponent implements OnInit {
   }
 
   deleteDragon(id: string): void {
-    if (confirm("Deseja realmente excluir esse dragão?")) {
+    if (confirm("Do you really want to delete this dragon?")) {
       this.dragonService.delete(id).subscribe({
         next: () => {
           this.listDragons = this.listDragons.filter((elem) => elem.id !== id);

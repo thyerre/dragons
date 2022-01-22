@@ -18,6 +18,9 @@
             .add-icon {
                 width: 30px;
                 margin-right: 15px;
+                &:hover {
+                    width: 40px;
+                }
             }
         }
         .search {
@@ -40,7 +43,7 @@
             tbody {
                 tr {
                     height: 40px;
-                    color: #979797;
+                    color: #c5c5c5;
                     .action-icon {
                         width: 30px;
                         margin-right: 15px;

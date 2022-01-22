@@ -1,13 +1,23 @@
 div {
     margin: 20px 0px;
     input {
-        background-color: #121214;
         border: none;
-        color: #929293;
-        height: 65px;
+        height: 60px;
         border-radius: 30px;
-        text-align: center;
         width: 100%;
         font-size: 1em;
+    }
+    label {
+        margin-left: 20px;
+    }
+    .default {
+        background-color: #121214;
+        color: #929293;
+        text-align: center;
+    }
+    .white {
+        background-color: #cecece;
+        color: #313131;
+        text-align: center;
     }
 }

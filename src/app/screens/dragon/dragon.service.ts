@@ -21,4 +21,16 @@ export class DragonService {
   index(): Observable<Dragon[]> {
     return this.http.get<Dragon[]>(`${API_URL}/dragon`);
   }
+
+  getById(id: string): Observable<Dragon> {
+    return this.http.get<Dragon>(`${API_URL}/dragon/${id}`);
+  }
+
+  save(values: Dragon): Observable<Dragon> {
+    return this.http.post<Dragon>(`${API_URL}/dragon`, values);
+  }
+
+  update(values: Dragon, id: string): Observable<Dragon> {
+    return this.http.put<Dragon>(`${API_URL}/dragon/${id}`, values);
+  }
 }
