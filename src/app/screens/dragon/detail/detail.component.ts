@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 import { Dragon } from '../dragon.interfaces';
 import { DragonService } from '../dragon.service';
 

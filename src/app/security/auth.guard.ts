@@ -1,7 +1,7 @@
-import { StorageService } from 'src/app/storage/storage.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { StorageService } from 'src/app/storage/storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +22,4 @@ export class AuthGuard implements CanActivate {
 
       return true;
   }
-
 }

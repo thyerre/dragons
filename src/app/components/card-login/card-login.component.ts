@@ -37,7 +37,7 @@ export class CardLoginComponent implements OnInit {
       this.storageService.setMe(this.form.value)
       this.router.navigate(['dragons']);
     } else {
-      alert('Usuário e senha não conferem!')
+      alert('Username and password do not match!')
     }
   }
 

@@ -51,7 +51,7 @@ export class CardNewRegisterComponent implements OnInit {
       this.storageService.saveUsers(values);
       this.router.navigate(['dragons']);
     } else {
-      alert('As senhas devem ser iguais!')
+      alert('Passwords must be the same!')
     }
   }
 

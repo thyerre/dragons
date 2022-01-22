@@ -54,3 +54,30 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+    .content-top {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .content-top {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    table {
+        text-align: left !important;
+        td,
+        th {
+            width: 100%;
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+        th:last-child {
+            display: none;
+        }
+    }
+}

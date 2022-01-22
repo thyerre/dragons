@@ -10,7 +10,7 @@
     <div class="content">
         <app-input [parentForm]="form" nameControl="name" placeholder="" class="white" label="Name"></app-input>
         <app-input [parentForm]="form" nameControl="type" placeholder="" class="white" label="Type"></app-input>
-        <app-button title="Save" type="login" [disabled]="form.invalid" (emiterActionButton)="update()"></app-button>
+        <app-button title="Update" type="login" [disabled]="form.invalid" (emiterActionButton)="update()"></app-button>
         <app-button title="Clear" type="transparent" (emiterActionButton)="clear()"></app-button>
     </div>
 </div>

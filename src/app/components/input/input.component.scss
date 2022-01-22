@@ -1,14 +1,16 @@
 div {
     margin: 20px 0px;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     input {
         border: none;
         height: 60px;
         border-radius: 30px;
         width: 100%;
         font-size: 1em;
-    }
-    label {
-        margin-left: 20px;
     }
     .default {
         background-color: #121214;

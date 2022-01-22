@@ -1,9 +1,9 @@
-import { Dragon } from './../dragon.interfaces';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { DragonService } from '../dragon.service';
+import { Dragon } from './../dragon.interfaces';
 
 @Component({
   selector: 'app-edit',

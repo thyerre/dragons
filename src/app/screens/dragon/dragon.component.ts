@@ -15,5 +15,4 @@ export class DragonComponent implements OnInit {
   ngOnInit(): void {
     this.router.navigate(['dragons', {outlets: {view: 'list'}}]);
   }
-
 }
