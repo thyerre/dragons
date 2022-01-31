@@ -1,5 +1,5 @@
-import { User } from 'src/app/app.interfaces';
 import { TestBed } from '@angular/core/testing';
+import { User } from 'src/app/interfaces/user.interface';
 
 import { StorageService } from './storage.service';
 

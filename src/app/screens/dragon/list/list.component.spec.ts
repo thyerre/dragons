@@ -2,10 +2,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DragonService } from '../dragon.service';
 
 import { ListComponent } from './list.component';
-import { Dragon } from '../dragon.interfaces';
+import { Dragon } from '../../../interfaces/dragon.interface';
+import { DragonService } from 'src/app/services/dragon.service';
 
 describe('ListComponent', () => {
   let component: ListComponent;

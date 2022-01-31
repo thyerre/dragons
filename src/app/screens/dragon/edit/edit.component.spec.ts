@@ -3,8 +3,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { DragonService } from '../dragon.service';
 import { EditComponent } from './edit.component';
+import { DragonService } from 'src/app/services/dragon.service';
 
 describe('EditComponent', () => {
   let component: EditComponent;

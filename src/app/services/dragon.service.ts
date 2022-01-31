@@ -2,8 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_URL } from 'src/environments/environment';
-
-import { Dragon } from './dragon.interfaces';
+import { Dragon } from '../interfaces/dragon.interface';
 
 @Injectable({
   providedIn: 'root'

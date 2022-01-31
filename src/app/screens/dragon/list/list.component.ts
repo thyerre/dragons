@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { DragonService } from 'src/app/services/dragon.service';
 
-import { Dragon } from './../dragon.interfaces';
-import { DragonService } from './../dragon.service';
+import { Dragon } from '../../../interfaces/dragon.interface';
 
 @Component({
   selector: 'app-list',

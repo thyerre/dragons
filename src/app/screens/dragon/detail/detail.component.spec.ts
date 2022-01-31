@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { DragonService } from 'src/app/services/dragon.service';
 
-import { DragonService } from '../dragon.service';
 import { DetailComponent } from './detail.component';
 
 describe('DetailComponent', () => {

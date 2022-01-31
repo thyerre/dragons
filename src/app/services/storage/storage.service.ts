@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { User } from '../app.interfaces';
+import { User } from '../../interfaces/user.interface';
 
 //Esse service foi criado para controlar o login na aplicação servindo com uma API
 @Injectable({

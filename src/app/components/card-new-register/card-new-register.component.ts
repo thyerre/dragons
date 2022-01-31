@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/app.interfaces';
-import { AuthService } from 'src/app/screens/auth/auth.service';
+import { User } from 'src/app/interfaces/user.interface';
+import { AuthService } from 'src/app/services/auth.service';
 
-import { StorageService } from './../../storage/storage.service';
+import { StorageService } from '../../services/storage/storage.service';
 
 @Component({
   selector: 'app-card-new-register',

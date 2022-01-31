@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { Dragon } from '../interfaces/dragon.interface';
 
-import { Dragon } from './dragon.interfaces';
 import { DragonService } from './dragon.service';
 
 describe('DragonService', () => {
@@ -10,7 +10,7 @@ describe('DragonService', () => {
   /**
   * Você deve adicionar um ID valido para rodar os testes
   */
-  const id = '79';
+  const id = '2';
   let service: DragonService;
 
   beforeEach(() => {
